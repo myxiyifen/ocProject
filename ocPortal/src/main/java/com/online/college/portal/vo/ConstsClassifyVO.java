@@ -1,0 +1,20 @@
+package com.online.college.portal.vo;
+
+import com.online.college.core.consts.domain.ConstsClassify;
+import com.online.college.core.course.domain.Course;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ConstsClassifyVO extends ConstsClassify{
+    private static final long serialVersionUID = -6898939223836635781L;
+
+    //子分类列表
+    private List<ConstsClassify> subClassifyList = new ArrayList<ConstsClassify>();
+
+    public List<ConstsClassify> getSubClassifyList() {
+        return subClassifyList;
+    }
+    //课程推荐列表
+    private List<Course> recomdCourseList;
+}
