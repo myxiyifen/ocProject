@@ -17,4 +17,13 @@ public class ConstsClassifyVO extends ConstsClassify{
     }
     //课程推荐列表
     private List<Course> recomdCourseList;
+
+    public List<Course> getRecomdCourseList() {
+        return recomdCourseList;
+    }
+
+    public void setRecomdCourseList(List<Course> recomdCourseList) {
+        this.recomdCourseList = recomdCourseList;
+    }
+
 }

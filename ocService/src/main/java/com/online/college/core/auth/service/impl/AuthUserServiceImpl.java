@@ -47,15 +47,15 @@ public class AuthUserServiceImpl implements IAuthUserService {
 	*获取首页推荐5个讲师
 	**/
 	public List<AuthUser> queryRecomd(){
-		List<AuthUser> recomdList = entityDao.queryRecomd();
-		if(CollectionUtils.isNotEmpty(recomdList)){
-			for(AuthUser item : recomdList){
-				if(StringUtils.isNotEmpty(item.getHeader())){
+		List<AuthUser> recomList=entityDao.queryRecomd();
+		if (CollectionUtils.isNotEmpty(recomList)) {
+			for (AuthUser item : recomList) {
+				if (StringUtils.isNotEmpty(item.getHeader())) {
 					item.setHeader(QiniuStorage.getUrl(item.getHeader()));
 				}
 			}
 		}
-		return recomdList;
+		return recomList;
 	}
 
 	public TailPage<AuthUser> queryPage(AuthUser queryEntity , TailPage<AuthUser> page){
